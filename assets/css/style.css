@@ -1,0 +1,1115 @@
+/* ===================================== */
+/* ========== RESET & GLOBAL STYLES ======= */
+/* ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ======= BODY & PAGE LAYOUT ======= */
+html, body {
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+	padding-top: 80px;	/* Ensure Header Stays Fixed on Scroll */
+}
+
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 80px 5%;
+    text-align: center;
+    width: 100%;
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* ======= UNIFORM HOVER EFFECT ======= */
+a, .btn, .project, .resume-item, .hero-title {
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover, .btn:hover {
+    color: #f8c471;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+.project:hover, .resume-item:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================== */
+/* ========== HEADER & NAVIGATION ======= */
+/* ===================================== */
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+/* Navigation Menu */
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+/* Navigation Links */
+.navbar a {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f8c471;
+}
+
+/* Social Icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Responsive Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+	letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #f8c471;
+}
+
+/* ===================================== */
+/* ========== HERO SECTION ============= */
+/* ===================================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: url('../img/hero-background.jpg') center/cover no-repeat;
+	padding: 0 8%;
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background fixed when scrolling */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 80vw; /* Ensures proper width */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Dark Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+/* Hero Content */
+.hero .container {
+    position: relative;
+    z-index: 10;
+    max-width: 80%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-title {
+    font-size: clamp(3rem, 7vw, 6rem); /* Responsive font size */
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    max-width: 90%; /* Ensures it doesn't exceed container width */
+    margin: 0 auto; /* Centers it horizontally */
+    text-align: center;
+    white-space: nowrap; /* Prevents text wrapping */
+    display: flex;
+    justify-content: center; /* Centers text within flexbox */
+    overflow: visible; /* Ensures text isn't cut off */
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    color: #ddd;
+    margin-top: 15px;
+    position: relative;
+}
+
+/* Uniform Vertical Spacing */
+.hero-title,
+.hero-subtitle,
+.about-link {
+    margin-bottom: 15px;
+}
+/* ===================================== */
+/* ========== ABOUT SECTION ============ */
+/* ===================================== */
+#about {
+    background: #1a1a1a; /* Keeping your theme color */
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column; /* Ensures full-width heading */
+    align-items: center;
+    text-align: center;
+}
+
+/* Full-width heading and introduction */
+.about-header {
+    max-width: 1100px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.about-link {
+    font-size: 18px;
+    color: white !important;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 30px;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-decoration: none; /* Prevents default link styling */
+}
+
+.about-link::after {
+    content: " →";
+    margin-left: 5px;
+    transition: margin-left 0.3s;
+}
+
+.about-link:hover::after {
+    margin-left: 10px;
+}
+
+.about-title {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-intro {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Two-column structure */
+.about-container {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+/* LEFT COLUMN - IMAGE */
+.about-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #f8c471; /* Matches the gold theme */
+}
+
+/* RIGHT COLUMN - TEXT */
+.about-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Professional Summary */
+.about-details {
+    margin-bottom: 20px;
+}
+
+.about-subheading {
+    font-size: 20px;
+    color: #f8c471;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Info Grid (Two-row structure) */
+.about-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 15px;
+}
+
+.about-info {
+    font-size: 16px;
+    color: white;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 16px;
+    color: white;
+    padding: 5px 0;
+    border-bottom: 1px solid #444; /* Subtle line effect */
+}
+
+
+/* ===================================== */
+/* ========== RESUME SECTION =========== */
+/* ===================================== */
+#resume {
+    background: #1a1a1a;
+    padding: 80px 5%;
+    text-align: left;
+}
+
+/* ======= Resume Grid Layout ======= */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ✅ Centering the Resume Section */
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 32px;
+    color: #white;
+    margin-bottom: 30px;
+}
+
+
+/* ✅ Adjust resume container to display two columns */
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ✅ Two equal columns */
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Ensure all Resume Items Have the Same Width */
+.resume-item.active .resume-content {
+    max-height: 500px; /* ✅ Expand fully when active */
+}
+
+
+/* Left Column: Education & Skills */
+.resume-left {
+    display: flex;  /* ✅ Ensure correct layout */
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Right Column: Professional Experience */
+.resume-right {
+    display: flex;  /* ✅ Ensure correct layout */
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Expand Toggle Button */
+.expand-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.expand-toggle:hover {
+    color: #f8c471;
+}
+
+.expand-toggle::after {
+    content: " ▼";
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* ✅ Ensure arrow consistency */
+.expand-toggle::after {
+    content: " ▼";
+    transition: transform 0.3s ease;
+}
+
+/* ✅ Expanded State */
+.expand-toggle.active::after {
+    content: " ▲";
+}
+
+/* Expanding Section Styling */
+.resume-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding-left: 20px;
+}
+
+.resume-item button {
+    width: 100%;
+    background: #111;
+    color: #ffcc66;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid #ffcc66;
+}
+
+.resume-item button:hover {
+    background: #222;
+}
+
+.resume-item .expand-toggle::after {
+    content: '▼';
+    float: right;
+}
+
+.resume-item.active .expand-toggle::after {
+    content: '▲';
+}
+
+/* Active state for opened sections */
+.resume-content.open {
+    max-height: 500px;
+}
+
+/* Opened State (Only applied when clicked) */
+.expand-toggle.active + .resume-content {
+    max-height: 500px; /* Adjust based on content */
+    opacity: 1;
+    padding: 15px; /* Add padding only when opened */
+}
+
+/* Container for Each Expanded Section */
+.resume-box {
+    padding: 10px;
+    background: #222;
+    border-radius: 5px;
+}
+
+/* Ensure Dots Stay in Place */
+.resume-item::before {
+    content: "•";
+    position: absolute;
+    left: -12px;
+    top: 12px;
+    font-size: 20px;
+    color: #f8c471;
+}
+
+/* Expanded State */
+.resume-item.active .resume-content {
+    max-height: 500px; /* Adjust this based on content */
+    opacity: 1;
+    padding: 15px;
+	display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fix Dot Hover Overlap */
+.resume-item:hover::before {
+    left: -15px;
+}
+
+/* Two-Column Layout */
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Left & Right Columns */
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* Adjusting list items inside expanded sections */
+.resume-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 15px;
+}
+
+.resume-content li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Resume Header */
+.resume-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ======= Resume Items Styling ======= */
+.resume-item {
+    background: #222;
+    padding: 15px;
+    border-left: 3px solid #f8c471;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.resume-header h2 {
+    font-size: 32px;
+    color: #f8c471;
+}
+
+/* Animation for Expanding */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= Timeline Effect ======= */
+.timeline-marker {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #f8c471;
+    border-radius: 50%;
+    transform: translateY(-50%); /* Keep dot centered */
+    pointer-events: none; /* Prevent hover effects */
+}
+
+/* Ensure Uniform Box Heights */
+.resume-left .resume-item,
+.resume-right .resume-item {
+    min-height: 80px; /* ✅ Prevents uneven boxes */
+}
+
+/* Ensure Resume Content is Fully Collapsed Initially */
+.resume-content {
+    max-height: 0px; /* Explicitly set to zero */
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    padding: 0; /* Ensure no padding affects visibility */
+}
+
+/* Adjust Font Sizes for Readability */
+.resume-heading {
+    font-size: 22px;
+    color: #f8c471;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* Skill Bars */
+.skill-bars {
+    margin-top: 20px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #f8c471;
+}
+
+/* ===================================== */
+/* ========== PROJECTS SECTION ========= */
+/* ===================================== */
+.project-grid {
+    display: grid;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 5%;
+}
+
+.projects-section {
+    text-align: center;
+    padding: 80px 0;
+    background: #222;
+    overflow: hidden;
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3); /* ✅ Transparent Background */
+    backdrop-filter: blur(10px); /* ✅ Blurred Effect */
+}
+
+/* Ensure track allows images to move without cropping */
+.carousel-track {
+    display: flex;
+    overflow: visible; /* ✅ Allows content to go outside without cropping */
+    width: max-content; /* ✅ Ensures only as many slides as needed are shown */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Ensure slide remains fully visible and aligned */
+.carousel-slide {
+    flex: 0 0 auto; /* ✅ Allows natural width instead of forcing a fixed size */
+    width: 300px; /* ✅ Adjust this based on your container size */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ensure images do not get cut */
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* ✅ Ensures full image visibility without cropping */
+    border-radius: 10px;
+}
+
+
+.carousel-slide:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+    opacity: 0.9;
+}
+
+
+/* Slide Titles */
+.carousel-slide h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #f8c471;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: 2px solid white;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 10; /* Ensures arrows stay above the carousel */
+}
+
+/* Left Arrow Position */
+.left-arrow {
+    left: 15px;
+}
+
+/* Right Arrow Position */
+.right-arrow {
+    right: 15px;
+}
+
+/* FontAwesome Icon Styling */
+.carousel-arrow i {
+    font-size: 18px;
+}
+
+/* Hover Effect */
+.carousel-arrow:hover {
+    background: white;
+    color: black;
+}
+/* Disabled Arrows (Faded Effect) */
+
+/* Default: Show 3 Projects */
+.project-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images scale properly without distortion */
+    border-radius: 10px;
+}
+
+/* Hover Effect */
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Project Box */
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Uniform Project Image Size */
+.project-box img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Project Title Box */
+.project-info {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.project-info h3 {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+/* Navigation Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.projects-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+}
+
+.projects-scroll {
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    scroll-behavior: smooth;
+    width: 80%;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.project {
+    flex: 0 0 280px;
+    text-align: center;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-size: 16px;
+    color: #f8c471;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    background: #f8c471;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#scroll-left {
+    left: -40px;
+}
+
+#scroll-right {
+    right: -40px;
+}
+
+.scroll-btn:hover {
+    background: #d9a441;
+}
+
+/* ===================================== */
+/* ========== CONTACT & FOOTER ========== */
+/* ===================================== */
+#contact {
+    background: #111;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Social Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-icons img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+}
+
+.contact-icons img:hover {
+    opacity: 0.7;
+}
+
+/* LET'S CONNECT Button */
+.btn-connect {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-connect:hover {
+    background: white;
+    color: black;
+}
+
+/* ======= FOOTER ======= */
+footer {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ======= BACK TO TOP BUTTON ======= */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    color: white;
+    border: 2px solid white; /* Matches 'Let's Connect' button */
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: none; /* Hidden by default */
+    backdrop-filter: blur(8px); /* ✅ Blurred effect */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#back-to-top i {
+    font-size: 20px;
+    color: white;
+}
+
+/* Hover Effect */
+#back-to-top:hover {
+    background: white;
+    color: black;
+}
+
+#back-to-top:hover i {
+    color: black;
+}
+
+/* ===================================== */
+/* ========== RESPONSIVE DESIGN ========= */
+/* ===================================== */
+/* Responsive Fix */
+
+@media (min-width: 1400px) {
+    .hero-title {
+        max-width: 70%; /* Keeps text centered on ultra-wide screens */
+        font-size: clamp(3rem, 5vw, 6rem);
+    }
+}
+
+
+@media (max-width: 1024px) { /* Tablets and below */
+    .hero-title {
+        font-size: clamp(3rem, 5vw, 6rem); /* Keeps text large enough */
+        max-width: 90%;
+        white-space: nowrap; /* Allows wrapping on smaller screens */
+    }
+	.project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+	.carousel-slide {
+        flex: 0 0 33.33%; /* Show 3 items */
+    }
+	.resume-container {
+        grid-template-columns: 1fr; /* ✅ Stack items on smaller screens */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile screens */
+    .hero-title {
+        font-size: 8vw;
+        max-width: 90%;
+        white-space: normal;
+    }
+	
+	.project-grid {
+        grid-template-columns: 1fr;
+    }
+	
+	section {
+        padding: 60px 3%;
+    }
+	
+	.grid-container {
+        grid-template-columns: 1fr;
+    }
+	
+	.hero-subtitle {
+        font-size: 18px;
+    }
+    .about-link {
+        font-size: 16px;
+    }
+	.navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar.active {
+        display: flex;
+		justify-content: center; /* Centers nav items */
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	
+	.about-mf {
+        flex-direction: column;
+        text-align: center;
+    }
+	
+	.profile-img {
+        width: 150px;
+    }
+	
+	.carousel-slide {
+        flex: 0 0 50%; /* Show 2 projects */
+        max-width: 100%;
+    }
+    .carousel-arrow {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+	.about-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-info-grid {
+        grid-template-columns: 1fr; /* Stack items in one column on small screens */
+    }
+}
